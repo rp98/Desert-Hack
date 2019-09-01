@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HILTI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+  <link rel="stylesheet" href="../static/css/style.css"> </link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="encap" style="opacity:0">
+        <div class="container">
+
+            <h1>Voice Controlled Notes App</h1>
+            <p class="page-description">A tiny app that allows you to take notes by recording your voice</p>
+
+            <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+
+            <div class="app">
+                <h3>Add New Note</h3>
+                <div class="input-single">
+                    <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
+                </div>
+                <button id="record-btn" title="Start Recording">Start Recording</button>
+                <button id="save-note-btn" title="Save Note">Stop Recording</button>
+                <p id="recording-instructions">Press the <strong>Start Recording</strong> button and allow access.</p>
+
+                <h3>My Notes</h3>
+                <ul id="notes">
+                    <li>
+                        <p class="no-notes">You don't have any notes.</p>
+                    </li>
+                </ul>
+                <h3>Summary</h3>
+                <p>{{final_summary}}</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -150 464 409">
+      <defs>
+        <linearGradient id="MyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="5%"  stop-color="#d2051e"/>
+            <stop offset="50%" stop-color="#d2051e"/>
+            <stop offset="95%" stop-color="#d2051e"/>
+          </linearGradient>
+          <path d="M 1,54.5 V 0 H 232 463 V 54.5 109 H 232 1 Z m 62,21 V 68 H 89.5 116 v 7.5 7.5 h 16 16 V 54.5 26 H 132 116 V 33.5 41 H 89.5 63 V 33.5 26 H 47 31 V 54.5 83 h 16 16 z m 123,-21 V 26 H 170 154 V 54.5 83 h 16 16 z M 288.77903,69.75 288.5,56.5 256.25,56.236147 224,55.972294 V 40.986147 26 H 208 192 V 54.5 83 h 48.52903 48.52902 z M 345,68 V 53 H 369.5 394 V 39.5 26 H 329 264 V 39.5 53 h 24.5 24.5 v 15 15 h 16 16 z M 432,54.5 V 26 H 416.5 401 V 54.5 83 h 15.5 15.5 z" id='a'/>
+      </defs>
+      <use xlink:href="#a" fill-opacity="1" stroke="#000" class="v1"/>
+    </svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../static/js/script.js"></script>
+
+</body>
+</html>
